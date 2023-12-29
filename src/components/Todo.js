@@ -15,8 +15,8 @@ export default function Todo() {
     setId(id + 1);
   }
 
-  function deleteTodoFunc(deleteId){
-    setTodoList(todoList.filter(item=>item.id!=deleteId));
+  function deleteTodoFunc(deleteId) {
+    setTodoList(todoList.filter((item) => item.id != deleteId));
   }
 
   return (
@@ -34,11 +34,14 @@ export default function Todo() {
       </form>
       <div>
         {todoList.map((item) => {
-          return <ul className="my-todo">
-          <p key={item.id} >{item.value}</p>
-          <button onClick={()=>deleteTodoFunc(item.id)}>Delete</button>
-        </ul>;
-          
+          return (
+            <ul>
+              <li className="my-todo">
+                <p key={item.id}>{item.value}</p>
+                <button onClick={() => deleteTodoFunc(item.id)}>Delete</button>
+              </li>
+            </ul>
+          );
         })}
       </div>
     </div>
