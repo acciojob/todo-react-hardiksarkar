@@ -1,1 +1,15 @@
+#main-container{
+    width: 50vw;
+    text-align: center;
+    margin: auto;
+}
 
+input,button{
+    padding: 0.8rem;
+}
+
+.my-todo{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0rem;
+}
