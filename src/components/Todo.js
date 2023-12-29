@@ -34,10 +34,10 @@ export default function Todo() {
       </form>
       <div>
         {todoList.map((item) => {
-          return <div className="my-todo">
+          return <ul className="my-todo">
           <p key={item.id} >{item.value}</p>
           <button onClick={()=>deleteTodoFunc(item.id)}>Delete</button>
-        </div>;
+        </ul>;
           
         })}
       </div>
